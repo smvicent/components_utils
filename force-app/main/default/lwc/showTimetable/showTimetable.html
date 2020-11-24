@@ -1,0 +1,11 @@
+<template>
+      <lightning-card  variant="Narrow"  title="Horario de apertura" icon-name="standard:account">
+          <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Editar" slot="actions"></lightning-button-icon>
+          <ul class="slds-var-m-around_medium">
+            <template for:each={timetable} for:item="dayOfWeek">
+                <li key={dayOfWeek.day}><strong>{dayOfWeek.day}:</strong> {dayOfWeek.timetable}</li>
+            </template>
+        </ul>
+      </lightning-card>
+</template>
+
